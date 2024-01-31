@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on José Ángel Carretero Montes</title>
+    <link>https://0xjoseangel.github.io/blog/page/</link>
+    <description>Recent content in Pages on José Ángel Carretero Montes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</managingEditor>
+    <webMaster>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</webMaster><atom:link href="https://0xjoseangel.github.io/blog/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sobre mi</title>
+      <link>https://0xjoseangel.github.io/blog/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</author>
+      <guid>https://0xjoseangel.github.io/blog/page/about/</guid>
+      <description>🎓 Tengo 19 años y actualmente estoy estudiando un doble grado en Ingeniería Informática y Administración y Dirección de Empresas en la Universidad de Granada.
+🌱 Enfocado en aprender y especializarme en ciencia de datos con Python y sus frameworks más utilizados.
+☁️ Tengo un gran interés en la inteligencia artificial y aspiro a dedicarme a ello en el futuro.
+📧 Puedes contactarme a través de:
+Correo Universitario: joseangel1@correo.ugr.es Correo Personal: joseangelcarretero300@gmail.</description>
+    </item>
+    
+  </channel>
+</rss>

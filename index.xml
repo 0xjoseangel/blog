@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>José Ángel Carretero Montes</title>
+    <link>https://0xjoseangel.github.io/blog/</link>
+    <description>Recent content on José Ángel Carretero Montes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</managingEditor>
+    <webMaster>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</webMaster>
+    <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://0xjoseangel.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tema1</title>
+      <link>https://0xjoseangel.github.io/blog/post/macro/tema1/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <author>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</author>
+      <guid>https://0xjoseangel.github.io/blog/post/macro/tema1/</guid>
+      <description>Tema 1. Introducción. 1.1. Origen de la macroeconomía. 1.1.1. Objetivos. La macroeconomía se ocupa del funcionamiento de la economía en su conjunto. Se trata de una ciencia aplicada, no exacta, que aborda cuestiones complejas, y a menudo urgentes, que afectan al bienestar de los ciudadanos.
+Esta tiene diversos objetivos principales como lo son un crecimiento económico elevado o una baja tasa de desempleo. El problema esta en que muchos de estos objetivos están enfrentados:</description>
+    </item>
+    
+    <item>
+      <title>tema2</title>
+      <link>https://0xjoseangel.github.io/blog/post/ec/tema2/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <author>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</author>
+      <guid>https://0xjoseangel.github.io/blog/post/ec/tema2/</guid>
+      <description>Tema 2: El sector real en una economía cerrada. 2.1. Modelo Keynesiano simple. El modelo simple de demanda agregada (Modelo Keynesiano Simple) explica el comportamiento de la producción nacional en el corto plazo.
+Laves del Modelo:
+Interdependencia entre la producción y el gasto: El gasto determina la producción y la renta, y la renta determina el gasto. A corto plazo, predomina el gasto (o demanda agregada) sobre la producción (renta u oferta agregada).</description>
+    </item>
+    
+    <item>
+      <title>tema3</title>
+      <link>https://0xjoseangel.github.io/blog/post/macro/tema3/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <author>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</author>
+      <guid>https://0xjoseangel.github.io/blog/post/macro/tema3/</guid>
+      <description>Tema 3. Los mercados financieros. 3.1. Activos financieros. Un activo financiero es un título emitido con las unidades económicas con déficit de fondos y adquirido por las unidades con superávit. Además de transferir fondos transfiere riesgos.
+Hay gran cantidad de productos financieros distintos como lo son los depósitos a la vista, de ahorro y a plazo; la renta fija; la renta variable…
+3.1.1. Activos financieros y riqueza real. Considerando la economía en su conjunto todos los activos financieros se cancelan puesto que todo activo financiero tiene como contrapartida un pasivo y por lo tanto:</description>
+    </item>
+    
+    <item>
+      <title>tema4</title>
+      <link>https://0xjoseangel.github.io/blog/post/macro/tema4/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <author>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</author>
+      <guid>https://0xjoseangel.github.io/blog/post/macro/tema4/</guid>
+      <description>Tema 4: El modelo IS-LM en una economía cerrada 4.1 El equilibrio en los mercados de bienes y financieros (modelo IS-LM) Constituye el núcleo de la macroeconomía a corto plazo, y es el instrumento del análisis macroeconómico de la escuela de la síntesis keynesiano-clásico.
+El modelo IS-LM determina los valores de la renta (PIB) y del tipo de interés (i) que equilibran o vacían simultáneamente los mercados de bienes y de dinero.</description>
+    </item>
+    
+    <item>
+      <title>Sobre mi</title>
+      <link>https://0xjoseangel.github.io/blog/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</author>
+      <guid>https://0xjoseangel.github.io/blog/page/about/</guid>
+      <description>🎓 Tengo 19 años y actualmente estoy estudiando un doble grado en Ingeniería Informática y Administración y Dirección de Empresas en la Universidad de Granada.
+🌱 Enfocado en aprender y especializarme en ciencia de datos con Python y sus frameworks más utilizados.
+☁️ Tengo un gran interés en la inteligencia artificial y aspiro a dedicarme a ello en el futuro.
+📧 Puedes contactarme a través de:
+Correo Universitario: joseangel1@correo.ugr.es Correo Personal: joseangelcarretero300@gmail.</description>
+    </item>
+    
+  </channel>
+</rss>
