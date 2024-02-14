@@ -2,7 +2,8 @@ baseurl = "https://0xjoseangel.github.io/blog/"
 DefaultContentLanguage = "es"
 title = "José Ángel Carretero Montes"
 # Using theme as git submodule 
-theme = "beautifulhugo"
+theme = ["hugo-embed-pdf-shortcode", "beautifulhugo"]
+enableInlineShortcodes = true
 # Or when using theme as hugo module
 # theme = "github.com/halogenica/beautifulhugo"
 pygmentsStyle = "trac"
