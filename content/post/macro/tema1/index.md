@@ -1,6 +1,6 @@
 ---
 title: tema1
-date: 2024-01-31
+date: 2024-02-14
 tags: [macro]
 ---
 
