@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Aritmética - </title>
+
+  <meta name="description" content="1. Tipos de datos Tamaño de objetos en C (en Bytes):
+Tipo de Datos C Normal 32-bit Intes IA32 x86-64 unsigned 4 4 4 int 4 4 4 long int 4 4 4 char 1 1 1 short 2 2 2 float 4 4 4 double 8 8 8 long double 8 10/12 16 char * 4 4 4 La tabla anterior muestra la represencatción en x86-64 de los distintos tiposdatos de C.">
+  <meta name="author" content="José Ángel Carretero Montes"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "José Ángel Carretero Montes",
+    
+    "url": "https:\/\/0xjoseangel.github.io\/blog\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/0xjoseangel.github.io\/blog\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/0xjoseangel.github.io\/blog\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/0xjoseangel.github.io\/blog\/post\/ec\/aritm%C3%A9tica\/",
+          "name": "Aritmética"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "José Ángel Carretero Montes"
+  },
+  "headline": "Aritmética",
+  "description" : "1. Tipos de datos Tamaño de objetos en C (en Bytes):\nTipo de Datos C Normal 32-bit Intes IA32 x86-64 unsigned 4 4 4 int 4 4 4 long int 4 4 4 char 1 1 1 short 2 2 2 float 4 4 4 double 8 8 8 long double 8 10\/12 16 char * 4 4 4 La tabla anterior muestra la represencatción en x86-64 de los distintos tiposdatos de C.",
+  "inLanguage" : "es",
+  "wordCount":  986 ,
+  "datePublished" : "2024-02-14T00:00:00",
+  "dateModified" : "2024-02-14T00:00:00",
+  "image" : "https:\/\/0xjoseangel.github.io\/blog\/img\/logo.png",
+  "keywords" : [ "ec" ],
+  "mainEntityOfPage" : "https:\/\/0xjoseangel.github.io\/blog\/post\/ec\/aritm%C3%A9tica\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/0xjoseangel.github.io\/blog\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/0xjoseangel.github.io\/blog\/img\/logo.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Aritmética" />
+<meta property="og:description" content="1. Tipos de datos Tamaño de objetos en C (en Bytes):
+Tipo de Datos C Normal 32-bit Intes IA32 x86-64 unsigned 4 4 4 int 4 4 4 long int 4 4 4 char 1 1 1 short 2 2 2 float 4 4 4 double 8 8 8 long double 8 10/12 16 char * 4 4 4 La tabla anterior muestra la represencatción en x86-64 de los distintos tiposdatos de C.">
+<meta property="og:image" content="https://0xjoseangel.github.io/blog/img/logo.png" />
+<meta property="og:url" content="https://0xjoseangel.github.io/blog/post/ec/aritm%C3%A9tica/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="José Ángel Carretero Montes" />
+
+  <meta name="twitter:title" content="Aritmética" />
+  <meta name="twitter:description" content="1. Tipos de datos Tamaño de objetos en C (en Bytes):
+Tipo de Datos C Normal 32-bit Intes IA32 x86-64 unsigned 4 4 4 int 4 4 4 long int 4 4 4 char 1 1 1 short 2 2 2 float 4 4 4 double 8 8 8 long double …">
+  <meta name="twitter:image" content="https://0xjoseangel.github.io/blog/img/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@https://twitter.com/0xjoseangel" />
+  <meta name="twitter:creator" content="@https://twitter.com/0xjoseangel" />
+  <link href='https://0xjoseangel.github.io/blog/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.110.0">
+  <link rel="alternate" href="https://0xjoseangel.github.io/blog/index.xml" type="application/rss+xml" title="José Ángel Carretero Montes"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="https://0xjoseangel.github.io/blog/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://0xjoseangel.github.io/blog/css/highlight.min.css" /><link rel="stylesheet" href="https://0xjoseangel.github.io/blog/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Conmuta navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://0xjoseangel.github.io/blog/">José Ángel Carretero Montes</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/blog/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/blog/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/blog/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="José Ángel Carretero Montes" href="https://0xjoseangel.github.io/blog/">
+            <img class="avatar-img" src="https://0xjoseangel.github.io/blog/img/logo.png" alt="José Ángel Carretero Montes" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Aritmética</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Publicado el February 14, 2024
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;986&nbsp;palabras
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;José Ángel Carretero Montes
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h1 id="1-tipos-de-datos">1. Tipos de datos</h1>
+<p>Tamaño de objetos en C (en Bytes):</p>
+<table>
+<thead>
+<tr>
+<th>Tipo de Datos C</th>
+<th>Normal 32-bit</th>
+<th>Intes IA32</th>
+<th>x86-64</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>unsigned</code></td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>long int</code></td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>8</td>
+<td>8</td>
+<td>8</td>
+</tr>
+<tr>
+<td><code>long double</code></td>
+<td>8</td>
+<td>10/12</td>
+<td>16</td>
+</tr>
+<tr>
+<td><code>char *</code></td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>La tabla anterior muestra la represencatción en <em>x86-64</em> de los distintos tiposdatos de C.</p>
+<p>Un detalle importante del ensamblador es el concepto de <code>word</code>, que se refiere a un tipo de dato de 16 bits. En base a esto, nos referiremos a los datos de 32bits como <code>double words</code> y a los de 64 bits como <code>quad words</code>.</p>
+<p>Cada ordenadro trabajará con unos datos de un determinado tamaño. A día de hoy cualquier ordenador moderno usará datos de 64 bits pero hasta hace no demasiadotiempo utilizaban 32 bits. Esto implica que las ordenes en ensamblador cambiarán ligeramente, ya que necesitamos especificar cual es el tamaño del tipo de dato con el que estamos trabajando. Eso se usando la ultima letra de cada instrucción para tal fin:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo de dato</th>
+<th>Sufijo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Byte</code></td>
+<td><code>b</code></td>
+</tr>
+<tr>
+<td><code>Word</code></td>
+<td><code>w</code></td>
+</tr>
+<tr>
+<td><code>Double Word</code></td>
+<td><code>l</code></td>
+</tr>
+<tr>
+<td><code>Quad word</code></td>
+<td><code>q</code></td>
+</tr>
+<tr>
+<td><code>Single precision</code></td>
+<td><code>s</code></td>
+</tr>
+<tr>
+<td><code>Double precision</code></td>
+<td><code>l</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>Single precision</code>(4 bytes) y <code>Double Precision</code>(8 bytes) hacen referencia a los tipos de datos <code>float</code> y <code>double</code> de C respectivamente.</p>
+<p>En la práctica, usaremos normalmente las <code>double words</code> y las <code>quad words</code>.</p>
+<p>De esta forma, si tenemos el siguiene código:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">multstore:
+</span></span><span class="line"><span class="cl">    pushq
+</span></span><span class="line"><span class="cl">    %rbx
+</span></span><span class="line"><span class="cl">    movq
+</span></span><span class="line"><span class="cl">    %rdx, %rbx
+</span></span><span class="line"><span class="cl">    call
+</span></span><span class="line"><span class="cl">    mult2
+</span></span><span class="line"><span class="cl">    movq
+</span></span><span class="line"><span class="cl">    %rax, (%rbx)
+</span></span><span class="line"><span class="cl">    popq
+</span></span><span class="line"><span class="cl">    %rbx
+</span></span><span class="line"><span class="cl">    ret
+</span></span></code></pre></div><p>Sabemos que estamos trabajando con de 64 bits ya que las ordenes ccuentan con el sufijo <code>q</code>.</p>
+<h1 id="2-acceso-a-información">2. Acceso a información</h1>
+<p>Un procesador con arquitectura x86-64 cuenta con 16 registros de proposito general. Algunos de ellos tienen por nombre <code>%r</code> y un número, pero otros, como <code>%ax</code> tienen un determinado nombre de acuredo al uso que historicamente se le ha dado, por ejemplo, el registro <code>%rsp</code> se ha usado tradicionalmente para el puntero de pila.</p>
+<p><img src="img/registros.png" alt="Registros"></p>
+<p>Las instrucciones pueden operar en datos de diferentes tamaños almacenados en los bytes de menor orden de los 16 registros. Las operaciones a nivel de byte pueden acceder al byte menos significativo, las operaciones de 16 bits pueden acceder a los 2 bytes menos significativos, las operaciones de 32 bits pueden acceder a los 4 bytes menos significativos, y las operaciones de 64 bits pueden acceder a registros enteros.</p>
+<p><img src="img/rax.png" alt="RAX"></p>
+<p>Mas adelante, presentaremos varias instrucciones para copiar y generar valores de 1, 2, 4 y 8 bytes. Cuando estas instrucciones tienen registros como destinos, surgen dos convenciones sobre lo que sucede con los bytes restantes en el registro para las instrucciones que generan menos de 8 bytes: aquellas que generan cantidades de 1 o 2 bytes dejan los bytes restantes sin cambios. Aquellas que generan cantidades de 4 bytes establecen los 4 bytes superiores del registro en cero. Esta última convención fue adoptada como parte de la expansión de IA32 a x86-64.</p>
+<h2 id="21-modos-de-direccionamiento">2.1. Modos de direccionamiento.</h2>
+<p>Los modos de direccionamiento, se refieren a las diversas maneras en que se especifica la ubicación de los operandos para una instrucción. Estos modos determinan cómo el procesador accede a los datos necesarios para ejecutar una instrucción. Cada modo de direccionamiento proporciona flexibilidad y eficiencia en la manipulación de datos en memoria.</p>
+<p>En ensamblador, los modos de direccionamiento pueden clasificarse en varias categorías, y cada categoría define la forma en que se accede a los operandos:</p>
+<ul>
+<li>
+<p>Registro Directo: La instrucción opera directamente en el contenido de un registro de la CPU.</p>
+</li>
+<li>
+<p>Inmediato: La instrucción utiliza un valor constante que se proporciona directamente en la instrucción.</p>
+</li>
+<li>
+<p>Indirecto: La instrucción accede a la memoria utilizando la dirección almacenada en un registro, permitiendo operaciones con datos almacenados en la memoria.</p>
+</li>
+<li>
+<p>Indirecto con Desplazamiento: Similar al modo indirecto, pero con un desplazamiento constante añadido a la dirección almacenada en un registro.</p>
+</li>
+<li>
+<p>Indirecto con Índice y Escala: Permite acceder a elementos de arreglos mediante un índice multiplicado por una escala, sumado a la dirección almacenada en un registro.</p>
+</li>
+<li>
+<p>Registro-Indirecto con Desplazamiento: Combina un registro con un desplazamiento constante para acceder a la memoria.</p>
+</li>
+<li>
+<p>Registro-Indirecto con Índice y Escala: Similar al anterior, pero utilizando un índice multiplicado por una escala.</p>
+</li>
+<li>
+<p>Basado en Pila (Stack): Operaciones directamente relacionadas con la pila de la CPU, como empujar y sacar valores de la pila.</p>
+</li>
+<li>
+<p>Relativo a Etiqueta: Se utiliza para realizar saltos condicionales o incondicionales a ubicaciones específicas del código, basándose en la posición relativa a una etiqueta.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Modo de Direccionamiento</th>
+<th>Ejemplo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Registro Directo</td>
+<td><code>mov eax, ebx</code></td>
+<td>Transfiere el contenido de un registro a otro.</td>
+</tr>
+<tr>
+<td>Inmediato</td>
+<td><code>mov ecx, 10</code></td>
+<td>Carga un valor constante en un registro.</td>
+</tr>
+<tr>
+<td>Indirecto</td>
+<td><code>mov edx, [eax]</code></td>
+<td>Mueve el contenido de la memoria apuntada por un registro a otro registro.</td>
+</tr>
+<tr>
+<td>Indirecto con Desplazamiento</td>
+<td><code>mov ebx, [eax+8]</code></td>
+<td>Similar al anterior, pero con un desplazamiento constante añadido.</td>
+</tr>
+<tr>
+<td>Indirecto con Índice y Escala</td>
+<td><code>mov ecx, [eax + ebx*2]</code></td>
+<td>Permite acceder a un elemento de un arreglo mediante un índice y una escala.</td>
+</tr>
+<tr>
+<td>Registro-Indirecto con Desplazamiento</td>
+<td><code>mov edx, [ebx + 16]</code></td>
+<td>Combina un registro y un desplazamiento para acceder a la memoria.</td>
+</tr>
+<tr>
+<td>Registro-Indirecto con Índice y Escala</td>
+<td><code>mov esi, [ebx + ecx*4]</code></td>
+<td>Similar al anterior, pero con un índice y una escala.</td>
+</tr>
+<tr>
+<td>Basado en Pila (Stack)</td>
+<td><code>push eax</code></td>
+<td>Opera directamente con la pila.</td>
+</tr>
+<tr>
+<td>Relativo a Etiqueta</td>
+<td><code>jmp etiqueta</code></td>
+<td>Salta a una etiqueta específica en el código.</td>
+</tr>
+</tbody>
+</table>
+<p>La forma mas fácil de asimilar esto, es aprendiendo el caso mas general:</p>
+<p>$$
+\text{disp(base,index,scale)} = M[disp + R[base] + R[index] \cdot scale]
+$$</p>
+<p>Algunos ejemplos con código:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">.section .text
+</span></span><span class="line"><span class="cl">_start: .global _start
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    mov $0, %eax # inm - registro
+</span></span><span class="line"><span class="cl">    xor %ebx, %ebx # reg - registro
+</span></span><span class="line"><span class="cl">    inc %ebx # reg
+</span></span><span class="line"><span class="cl">    mov $array, %ecx # inmediato - reg
+</span></span><span class="line"><span class="cl">    mov array, %edx # directo - reg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    mov (%ecx) , %edx # indirecto
+</span></span><span class="line"><span class="cl">    add (%ecx,%ebx,4), %edx # combinado
+</span></span><span class="line"><span class="cl">    add array( ,%ebx,4), %edx # indexado
+</span></span><span class="line"><span class="cl">    mov -8(%ebp) 
+</span></span></code></pre></div><p>{{ &lt; embed-pdf url=&quot;./file/file.pdf&quot;  &gt; }}</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://0xjoseangel.github.io/blog//tags/ec/">ec</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2fec%2faritm%25C3%25A9tica%2f&amp;text=Aritm%c3%a9tica&amp;via=https%3a%2f%2ftwitter.com%2f0xjoseangel" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2fec%2faritm%25C3%25A9tica%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2fec%2faritm%25C3%25A9tica%2f&amp;title=Aritm%c3%a9tica" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2fec%2faritm%25C3%25A9tica%2f&amp;title=Aritm%c3%a9tica" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2fec%2faritm%25C3%25A9tica%2f&amp;title=Aritm%c3%a9tica" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2fec%2faritm%25C3%25A9tica%2f&amp;description=Aritm%c3%a9tica" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">Ver también</h4>
+                  <ul>
+                
+                
+                    <li><a href="/blog/post/ec/tema2/">tema2</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://0xjoseangel.github.io/blog/post/macro/tema1/" data-toggle="tooltip" data-placement="top" title="tema1">&larr; Artículo anterior</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="mailto:joseangelcarretero300@gmail.com" title="Email me">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://github.com/0xjoseangel" title="GitHub">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://twitter.com/0xjoseangel" title="Twitter">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.linkedin.com/in/jos%C3%A9-%C3%A1ngel-carretero-montes-476008202/" title="LinkedIn">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.instagram.com/joseangelcarretero/" title="Instagram">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              José Ángel Carretero Montes
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2024
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://0xjoseangel.github.io/blog/">José Ángel Carretero Montes</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="https://0xjoseangel.github.io/blog/js/main.js"></script>
+<script src="https://0xjoseangel.github.io/blog/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://0xjoseangel.github.io/blog/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

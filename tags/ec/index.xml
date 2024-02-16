@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</managingEditor>
     <webMaster>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</webMaster>
-    <lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://0xjoseangel.github.io/blog/tags/ec/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://0xjoseangel.github.io/blog/tags/ec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aritmética</title>
+      <link>https://0xjoseangel.github.io/blog/post/ec/aritm%C3%A9tica/</link>
+      <pubDate>Wed, 14 Feb 2024 00:00:00 +0000</pubDate>
+      <author>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</author>
+      <guid>https://0xjoseangel.github.io/blog/post/ec/aritm%C3%A9tica/</guid>
+      <description>1. Tipos de datos Tamaño de objetos en C (en Bytes):
+Tipo de Datos C Normal 32-bit Intes IA32 x86-64 unsigned 4 4 4 int 4 4 4 long int 4 4 4 char 1 1 1 short 2 2 2 float 4 4 4 double 8 8 8 long double 8 10/12 16 char * 4 4 4 La tabla anterior muestra la represencatción en x86-64 de los distintos tiposdatos de C.</description>
+    </item>
+    
     <item>
       <title>tema2</title>
       <link>https://0xjoseangel.github.io/blog/post/ec/tema2/</link>
