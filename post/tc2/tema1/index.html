@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>tema1 - </title>
+
+  <meta name="description" content="Tema 1: Algunas distribuciones de probabilidad continuas. 1.1 Distribución uniforme: Descripción: Se trata de una distribución de probabilidad continua en el intervalo \([a, b]\).
+Función de densidad de probabilidad: La función de densidad de probabilidad es:
+$$ f(x) = \begin{cases} \frac{1}{b-a} &amp; \text{si } a \leq x \leq b \ 0 &amp; \text{si } x &lt; a \text{ o } x &gt; b \end{cases} $$
+Función de distribución: La función de distribución es:">
+  <meta name="author" content="José Ángel Carretero Montes"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "José Ángel Carretero Montes",
+    
+    "url": "https:\/\/0xjoseangel.github.io\/blog\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/0xjoseangel.github.io\/blog\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/0xjoseangel.github.io\/blog\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/0xjoseangel.github.io\/blog\/post\/tc2\/tema1\/",
+          "name": "Tema1"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "José Ángel Carretero Montes"
+  },
+  "headline": "tema1",
+  "description" : "Tema 1: Algunas distribuciones de probabilidad continuas. 1.1 Distribución uniforme: Descripción: Se trata de una distribución de probabilidad continua en el intervalo \\([a, b]\\).\nFunción de densidad de probabilidad: La función de densidad de probabilidad es:\n$$ f(x) = \\begin{cases} \\frac{1}{b-a} \u0026amp; \\text{si } a \\leq x \\leq b \\ 0 \u0026amp; \\text{si } x \u0026lt; a \\text{ o } x \u0026gt; b \\end{cases} $$\nFunción de distribución: La función de distribución es:",
+  "inLanguage" : "es",
+  "wordCount":  536 ,
+  "datePublished" : "2024-02-26T00:00:00",
+  "dateModified" : "2024-02-26T00:00:00",
+  "image" : "https:\/\/0xjoseangel.github.io\/blog\/img\/logo.png",
+  "keywords" : [ "tc2" ],
+  "mainEntityOfPage" : "https:\/\/0xjoseangel.github.io\/blog\/post\/tc2\/tema1\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/0xjoseangel.github.io\/blog\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/0xjoseangel.github.io\/blog\/img\/logo.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="tema1" />
+<meta property="og:description" content="Tema 1: Algunas distribuciones de probabilidad continuas. 1.1 Distribución uniforme: Descripción: Se trata de una distribución de probabilidad continua en el intervalo \([a, b]\).
+Función de densidad de probabilidad: La función de densidad de probabilidad es:
+$$ f(x) = \begin{cases} \frac{1}{b-a} &amp; \text{si } a \leq x \leq b \ 0 &amp; \text{si } x &lt; a \text{ o } x &gt; b \end{cases} $$
+Función de distribución: La función de distribución es:">
+<meta property="og:image" content="https://0xjoseangel.github.io/blog/img/logo.png" />
+<meta property="og:url" content="https://0xjoseangel.github.io/blog/post/tc2/tema1/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="José Ángel Carretero Montes" />
+
+  <meta name="twitter:title" content="tema1" />
+  <meta name="twitter:description" content="Tema 1: Algunas distribuciones de probabilidad continuas. 1.1 Distribución uniforme: Descripción: Se trata de una distribución de probabilidad continua en el intervalo \([a, b]\).
+Función de densidad …">
+  <meta name="twitter:image" content="https://0xjoseangel.github.io/blog/img/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@https://twitter.com/0xjoseangel" />
+  <meta name="twitter:creator" content="@https://twitter.com/0xjoseangel" />
+  <link href='https://0xjoseangel.github.io/blog/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.110.0">
+  <link rel="alternate" href="https://0xjoseangel.github.io/blog/index.xml" type="application/rss+xml" title="José Ángel Carretero Montes"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="https://0xjoseangel.github.io/blog/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://0xjoseangel.github.io/blog/css/highlight.min.css" /><link rel="stylesheet" href="https://0xjoseangel.github.io/blog/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Conmuta navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://0xjoseangel.github.io/blog/">José Ángel Carretero Montes</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/blog/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/blog/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/blog/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="José Ángel Carretero Montes" href="https://0xjoseangel.github.io/blog/">
+            <img class="avatar-img" src="https://0xjoseangel.github.io/blog/img/logo.png" alt="José Ángel Carretero Montes" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>tema1</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Publicado el February 26, 2024
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;536&nbsp;palabras
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;José Ángel Carretero Montes
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h1 id="tema-1-algunas-distribuciones-de-probabilidad-continuas">Tema 1: Algunas distribuciones de probabilidad continuas.</h1>
+<h2 id="11-distribución-uniforme">1.1 Distribución uniforme:</h2>
+<h3 id="descripción">Descripción:</h3>
+<p>Se trata de una distribución de probabilidad continua en el intervalo \([a, b]\).</p>
+<h3 id="función-de-densidad-de-probabilidad">Función de densidad de probabilidad:</h3>
+<p>La función de densidad de probabilidad es:</p>
+<p>$$
+f(x) = \begin{cases}
+\frac{1}{b-a} &amp; \text{si } a \leq x \leq b \
+0 &amp; \text{si } x &lt; a \text{ o } x &gt; b
+\end{cases}
+$$</p>
+<h3 id="función-de-distribución">Función de distribución:</h3>
+<p>La función de distribución es:</p>
+<p>$$
+F(x) = \begin{cases}
+0 &amp; \text{si } x &lt; a \
+\frac{x-a}{b-a} &amp; \text{si } a \leq x \leq b \
+1 &amp; \text{si } x &gt; b
+\end{cases}
+$$</p>
+<h3 id="medidas-de-tendencia-central-y-dispersión">Medidas de tendencia central y dispersión:</h3>
+<ul>
+<li>Esperanza matemática: \(E(X) = \frac{a+b}{2}\)</li>
+<li>Varianza: \(Var(X) = \frac{(b-a)^2}{12}\)</li>
+</ul>
+<h3 id="coeficientes-de-asimetría">Coeficientes de asimetría:</h3>
+<ul>
+<li>Coeficiente de asimetría de tercer orden: \(g_1 = 0\)</li>
+<li>Coeficiente de asimetría de cuarto orden: \(g_2 = -\frac{6}{5}\)</li>
+</ul>
+<h2 id="12-distribución-gamma">1.2 Distribución Gamma:</h2>
+<h3 id="descripción-1">Descripción:</h3>
+<p>La distribución Gamma es utilizada para modelar tiempos de espera hasta que ocurra un número determinado de eventos.</p>
+<h3 id="función-de-densidad-de-probabilidad-1">Función de densidad de probabilidad:</h3>
+<p>La función de densidad de probabilidad es:</p>
+<p>$$
+f(x; k, \theta) = \frac{1}{\Gamma(k)\theta^k} x^{k-1} e^{-\frac{x}{\theta}}
+$$</p>
+<p>donde \(k\) es el parámetro de forma y \(\theta\) es el parámetro de escala.</p>
+<h3 id="función-de-distribución-1">Función de distribución:</h3>
+<p>La función de distribución es expresada con la función gamma incompleta:</p>
+<p>$$
+F(x; k, \theta) = \begin{cases}
+0 &amp; \text{si } x &lt; 0 \
+\frac{1}{\Gamma(k)} \gamma(k, \frac{x}{\theta}) &amp; \text{si } x \geq 0
+\end{cases}
+$$</p>
+<h3 id="medidas-de-tendencia-central-y-dispersión-1">Medidas de tendencia central y dispersión:</h3>
+<ul>
+<li>Esperanza matemática: \(E(X) = k\theta\)</li>
+<li>Varianza: \(Var(X) = k\theta^2\)</li>
+</ul>
+<h2 id="13-distribución-exponencial">1.3 Distribución Exponencial:</h2>
+<h3 id="descripción-2">Descripción:</h3>
+<p>La distribución exponencial modela el tiempo entre eventos en un proceso de Poisson.</p>
+<h3 id="función-de-densidad-de-probabilidad-2">Función de densidad de probabilidad:</h3>
+<p>La función de densidad de probabilidad es:</p>
+<p>$$
+f(x; \lambda) = \lambda e^{-\lambda x}
+$$</p>
+<p>donde \(\lambda\) es la tasa de ocurrencia.</p>
+<h3 id="función-de-distribución-2">Función de distribución:</h3>
+<p>La función de distribución es:</p>
+<p>$$
+F(x; \lambda) = \begin{cases}
+0 &amp; \text{si } x &lt; 0 \
+1 - e^{-\lambda x} &amp; \text{si } x \geq 0
+\end{cases}
+$$</p>
+<h3 id="medidas-de-tendencia-central-y-dispersión-2">Medidas de tendencia central y dispersión:</h3>
+<ul>
+<li>Esperanza matemática: \(E(X) = \frac{1}{\lambda}\)</li>
+<li>Varianza: \(Var(X) = \frac{1}{\lambda^2}\)</li>
+</ul>
+<h2 id="14-distribución-beta">1.4 Distribución Beta:</h2>
+<h3 id="descripción-3">Descripción:</h3>
+<p>La distribución Beta es utilizada para modelar variables aleatorias que tienen un rango limitado entre 0 y 1.</p>
+<h3 id="función-de-densidad-de-probabilidad-3">Función de densidad de probabilidad:</h3>
+<p>La función de densidad de probabilidad es:</p>
+<p>$$
+f(x; \alpha, \beta) = \frac{x^{\alpha-1}(1-x)^{\beta-1}}{B(\alpha, \beta)}
+$$</p>
+<p>donde \(B(\alpha, \beta)\) es la función Beta.</p>
+<h3 id="función-de-distribución-3">Función de distribución:</h3>
+<p>La función de distribución es:</p>
+<p>$$
+F(x; \alpha, \beta) = \begin{cases}
+0 &amp; \text{si } x &lt; 0 \
+I_x(\alpha, \beta) &amp; \text{si } 0 \leq x \leq 1 \
+1 &amp; \text{si } x &gt; 1
+\end{cases}
+$$</p>
+<h3 id="medidas-de-tendencia-central-y-dispersión-3">Medidas de tendencia central y dispersión:</h3>
+<ul>
+<li>Esperanza matemática: \(E(X) = \frac{\alpha}{\alpha+\beta}\)</li>
+<li>Varianza: \(Var(X) = \frac{\alpha\beta}{(\alpha+\beta)^2(\alpha+\beta+1)}\)</li>
+</ul>
+<h2 id="15-distribución-normal">1.5 Distribución Normal:</h2>
+<h3 id="descripción-4">Descripción:</h3>
+<p>La distribución normal es una de las distribuciones más comunes en estadísticas y modela muchos fenómenos naturales.</p>
+<h3 id="función-de-densidad-de-probabilidad-4">Función de densidad de probabilidad:</h3>
+<p>La función de densidad de probabilidad es:</p>
+<p>$$
+f(x; \mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+$$</p>
+<p>donde \(\mu\) es la media y \(\sigma\) es la desviación estándar.</p>
+<h3 id="función-de-distribución-4">Función de distribución:</h3>
+<p>La función de distribución es:</p>
+<p>$$
+F(x; \mu, \sigma) = \frac{1}{2} \left[1 + \text{erf}\left(\frac{x-\mu}{\sigma \sqrt{2}}\right)\right]
+$$</p>
+<h3 id="medidas-de-tendencia-central-y-dispersión-4">Medidas de tendencia central y dispersión:</h3>
+<ul>
+<li>Esperanza matemática: \(E(X) = \mu\)</li>
+<li>Varianza: \(Var(X) = \sigma^2\)</li>
+</ul>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://0xjoseangel.github.io/blog//tags/tc2/">tc2</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2ftc2%2ftema1%2f&amp;text=tema1&amp;via=https%3a%2f%2ftwitter.com%2f0xjoseangel" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2ftc2%2ftema1%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2ftc2%2ftema1%2f&amp;title=tema1" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2ftc2%2ftema1%2f&amp;title=tema1" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2ftc2%2ftema1%2f&amp;title=tema1" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2ftc2%2ftema1%2f&amp;description=tema1" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+            <li class="next">
+              <a href="https://0xjoseangel.github.io/blog/post/lmd/tema1/" data-toggle="tooltip" data-placement="top" title="tema1">Artículo siguiente &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="mailto:joseangelcarretero300@gmail.com" title="Email me">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://github.com/0xjoseangel" title="GitHub">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://twitter.com/0xjoseangel" title="Twitter">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.linkedin.com/in/jos%C3%A9-%C3%A1ngel-carretero-montes-476008202/" title="LinkedIn">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.instagram.com/joseangelcarretero/" title="Instagram">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              José Ángel Carretero Montes
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2024
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://0xjoseangel.github.io/blog/">José Ángel Carretero Montes</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="https://0xjoseangel.github.io/blog/js/main.js"></script>
+<script src="https://0xjoseangel.github.io/blog/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://0xjoseangel.github.io/blog/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

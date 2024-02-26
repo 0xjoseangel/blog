@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tc2 on José Ángel Carretero Montes</title>
+    <link>https://0xjoseangel.github.io/blog/tags/tc2/</link>
+    <description>Recent content in tc2 on José Ángel Carretero Montes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</managingEditor>
+    <webMaster>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</webMaster>
+    <lastBuildDate>Mon, 26 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://0xjoseangel.github.io/blog/tags/tc2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tema1</title>
+      <link>https://0xjoseangel.github.io/blog/post/tc2/tema1/</link>
+      <pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
+      <author>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</author>
+      <guid>https://0xjoseangel.github.io/blog/post/tc2/tema1/</guid>
+      <description>Tema 1: Algunas distribuciones de probabilidad continuas. 1.1 Distribución uniforme: Descripción: Se trata de una distribución de probabilidad continua en el intervalo \([a, b]\).
+Función de densidad de probabilidad: La función de densidad de probabilidad es:
+$$ f(x) = \begin{cases} \frac{1}{b-a} &amp;amp; \text{si } a \leq x \leq b \ 0 &amp;amp; \text{si } x &amp;lt; a \text{ o } x &amp;gt; b \end{cases} $$
+Función de distribución: La función de distribución es:</description>
+    </item>
+    
+  </channel>
+</rss>

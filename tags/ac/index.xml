@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ac on José Ángel Carretero Montes</title>
+    <link>https://0xjoseangel.github.io/blog/tags/ac/</link>
+    <description>Recent content in ac on José Ángel Carretero Montes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</managingEditor>
+    <webMaster>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</webMaster>
+    <lastBuildDate>Mon, 26 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://0xjoseangel.github.io/blog/tags/ac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tema1</title>
+      <link>https://0xjoseangel.github.io/blog/post/ac/tema1/</link>
+      <pubDate>Mon, 26 Feb 2024 00:00:00 +0000</pubDate>
+      <author>joseangelcarretero300@gmail.com (José Ángel Carretero Montes)</author>
+      <guid>https://0xjoseangel.github.io/blog/post/ac/tema1/</guid>
+      <description>Arquitecturas Paralelas: Clasificación y Prestaciones Niveles de paralelismo {width=50%}
+La programación paralela se refiere a la ejecución simultánea de múltiples tareas o procesos para resolver un problema computacional. En lugar de ejecutar un solo conjunto de instrucciones de manera secuencial, la programación paralela divide el trabajo en partes más pequeñas que pueden ejecutarse al mismo tiempo. Este enfoque tiene como objetivo mejorar el rendimiento y la eficiencia de los programas al aprovechar al máximo los recursos disponibles.</description>
+    </item>
+    
+  </channel>
+</rss>

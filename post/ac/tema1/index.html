@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>tema1 - </title>
+
+  <meta name="description" content="Arquitecturas Paralelas: Clasificación y Prestaciones Niveles de paralelismo {width=50%}
+La programación paralela se refiere a la ejecución simultánea de múltiples tareas o procesos para resolver un problema computacional. En lugar de ejecutar un solo conjunto de instrucciones de manera secuencial, la programación paralela divide el trabajo en partes más pequeñas que pueden ejecutarse al mismo tiempo. Este enfoque tiene como objetivo mejorar el rendimiento y la eficiencia de los programas al aprovechar al máximo los recursos disponibles.">
+  <meta name="author" content="José Ángel Carretero Montes"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "José Ángel Carretero Montes",
+    
+    "url": "https:\/\/0xjoseangel.github.io\/blog\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/0xjoseangel.github.io\/blog\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/0xjoseangel.github.io\/blog\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/0xjoseangel.github.io\/blog\/post\/ac\/tema1\/",
+          "name": "Tema1"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "José Ángel Carretero Montes"
+  },
+  "headline": "tema1",
+  "description" : "Arquitecturas Paralelas: Clasificación y Prestaciones Niveles de paralelismo {width=50%}\nLa programación paralela se refiere a la ejecución simultánea de múltiples tareas o procesos para resolver un problema computacional. En lugar de ejecutar un solo conjunto de instrucciones de manera secuencial, la programación paralela divide el trabajo en partes más pequeñas que pueden ejecutarse al mismo tiempo. Este enfoque tiene como objetivo mejorar el rendimiento y la eficiencia de los programas al aprovechar al máximo los recursos disponibles.",
+  "inLanguage" : "es",
+  "wordCount":  1691 ,
+  "datePublished" : "2024-02-26T00:00:00",
+  "dateModified" : "2024-02-26T00:00:00",
+  "image" : "https:\/\/0xjoseangel.github.io\/blog\/img\/logo.png",
+  "keywords" : [ "ac" ],
+  "mainEntityOfPage" : "https:\/\/0xjoseangel.github.io\/blog\/post\/ac\/tema1\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/0xjoseangel.github.io\/blog\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/0xjoseangel.github.io\/blog\/img\/logo.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="tema1" />
+<meta property="og:description" content="Arquitecturas Paralelas: Clasificación y Prestaciones Niveles de paralelismo {width=50%}
+La programación paralela se refiere a la ejecución simultánea de múltiples tareas o procesos para resolver un problema computacional. En lugar de ejecutar un solo conjunto de instrucciones de manera secuencial, la programación paralela divide el trabajo en partes más pequeñas que pueden ejecutarse al mismo tiempo. Este enfoque tiene como objetivo mejorar el rendimiento y la eficiencia de los programas al aprovechar al máximo los recursos disponibles.">
+<meta property="og:image" content="https://0xjoseangel.github.io/blog/img/logo.png" />
+<meta property="og:url" content="https://0xjoseangel.github.io/blog/post/ac/tema1/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="José Ángel Carretero Montes" />
+
+  <meta name="twitter:title" content="tema1" />
+  <meta name="twitter:description" content="Arquitecturas Paralelas: Clasificación y Prestaciones Niveles de paralelismo {width=50%}
+La programación paralela se refiere a la ejecución simultánea de múltiples tareas o procesos para resolver un …">
+  <meta name="twitter:image" content="https://0xjoseangel.github.io/blog/img/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@https://twitter.com/0xjoseangel" />
+  <meta name="twitter:creator" content="@https://twitter.com/0xjoseangel" />
+  <link href='https://0xjoseangel.github.io/blog/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.110.0">
+  <link rel="alternate" href="https://0xjoseangel.github.io/blog/index.xml" type="application/rss+xml" title="José Ángel Carretero Montes"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="https://0xjoseangel.github.io/blog/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://0xjoseangel.github.io/blog/css/highlight.min.css" /><link rel="stylesheet" href="https://0xjoseangel.github.io/blog/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Conmuta navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://0xjoseangel.github.io/blog/">José Ángel Carretero Montes</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/blog/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/blog/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/blog/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="José Ángel Carretero Montes" href="https://0xjoseangel.github.io/blog/">
+            <img class="avatar-img" src="https://0xjoseangel.github.io/blog/img/logo.png" alt="José Ángel Carretero Montes" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>tema1</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Publicado el February 26, 2024
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;8&nbsp;minutos
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1691&nbsp;palabras
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;José Ángel Carretero Montes
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h1 id="arquitecturas-paralelas-clasificación-y-prestaciones">Arquitecturas Paralelas: Clasificación y Prestaciones</h1>
+<h2 id="niveles-de-paralelismo">Niveles de paralelismo</h2>
+<p><img src="./img/Cclasificacion.png" alt="Niveles de paralelismo">{width=50%}</p>
+<p>La programación paralela se refiere a la ejecución simultánea de múltiples tareas o procesos para resolver un problema computacional. En lugar de ejecutar un solo conjunto de instrucciones de manera secuencial, la programación paralela divide el trabajo en partes más pequeñas que pueden ejecutarse al mismo tiempo. Este enfoque tiene como objetivo mejorar el rendimiento y la eficiencia de los programas al aprovechar al máximo los recursos disponibles.</p>
+<h3 id="granuralidad-del-paralelismo">Granuralidad del paralelismo</h3>
+<p>La <strong>granularidad</strong> en el contexto de la programación paralela se refiere al tamaño de las unidades de trabajo que se dividen para ejecutarse de manera simultánea. Puede considerarse como la medida de la cantidad de trabajo que se realiza en paralelo. Hay dos términos relacionados con la granularidad:</p>
+<ol>
+<li>
+<p><strong>Granularidad Fina (Fine-Grained):</strong> En este enfoque, las unidades de trabajo son pequeñas y se dividen en tareas muy pequeñas. Cada tarea individual puede ser ejecutada de manera independiente. Este tipo de granularidad es útil en situaciones donde se pueden identificar y ejecutar tareas pequeñas de manera eficiente. Sin embargo, puede haber un costo asociado con la gestión del paralelismo, ya que la sobrecarga de coordinar tareas pequeñas puede superar los beneficios.</p>
+</li>
+<li>
+<p><strong>Granularidad Gruesa (Coarse-Grained):</strong> Aquí, las unidades de trabajo son más grandes y se dividen en tareas más sustanciales. Cada tarea puede requerir una mayor cantidad de cómputo antes de completarse, pero la sobrecarga de coordinación es menor en comparación con la granularidad fina. Este enfoque es útil cuando se desea minimizar la sobrecarga de administración y la comunicación entre tareas paralelas.</p>
+</li>
+</ol>
+<p><img src="./img/granuralidad.png" alt="Granuralidad">{width=50%}</p>
+<p>La elección entre granularidad fina y gruesa depende del problema específico, la arquitectura del sistema y otros factores. En algunos casos, una combinación de ambos enfoques, conocida como &ldquo;granularidad media&rdquo;, puede ser utilizada para aprovechar las ventajas de ambas opciones.</p>
+<h3 id="dependencias-de-datos">Dependencias de datos</h3>
+<p>Esto se refiere a la relación entre las tareas paralelas y los datos que utilizan. Las dependencias de datos pueden afectar la forma en que las tareas se pueden dividir y ejecutar demanera simultánea. Hay cuatro tipos principales de dependencias de datos:</p>
+<ul>
+<li><strong>RAW (Read After Write):</strong> Una tarea lee datos que han sido escritos por otra tarea. Ocurre cuando una instrucción depende del resultado de una instrucción previa que es una escritura en la memoria.</li>
+<li><strong>WAR (Write After Read):</strong> Una tarea escribe datos que han sido leídos por otra tarea. Ocurre cuando una instrucción escribe en la memoria y otra instrucción depende del valor escrito.</li>
+<li><strong>WAW (Write After Write):</strong> Dos tareas intentan escribir en la misma ubicación de memoria.</li>
+</ul>
+<p>Ejemplos de dependencias de datos</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Código que no depende de &#39;a&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">d</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">e</span><span class="p">;</span>
+</span></span></code></pre></div><p>En este ejmplo, podemos ver una dependencia RAW entre la primera y segunda instrucción, ya que la segunda instrucción depende del resultado de la primera. Si estas instrucciones se ejecutan en paralelo, el resultado puede ser incorrecto si no se toman medidas para manejar la dependencia.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Se lee &#39;a&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">d</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Se lee a
+</span></span></span></code></pre></div><p>En este caso, hay una dependencia WAW entre las dos instrucciones que escriben en &lsquo;a&rsquo;. Si estas instrucciones se ejecutan en paralelo, el resultado puede ser incorrecto.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="n">d</span> <span class="o">+</span> <span class="n">e</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Se lee &#39;a&#39;
+</span></span></span></code></pre></div><p>En este ultimo caso, hay una dependencia WAR entre las dos instrucciones. La segunda instrucción depende del valor de &lsquo;a&rsquo; que se lee en la primera instrucción. Si estas instrucciones se ejecutan en paralelo, el resultado puede ser incorrecto.</p>
+<h3 id="paralelismo-de-tareas-tlp--task-level-par">Paralelismo de tareas (TLP -Task Level Par).</h3>
+<p>Se encuentra extrayendo la estructura lógica de funciones de una aplicación. Está relacionado con el paralelismo a nivel de <strong>función</strong>.</p>
+<p>El paralelismo a nivel de tareas es un enfoque de programación paralela en el cual un programa se divide en tareas independientes que pueden ejecutarse simultáneamente en diferentes procesadores o núcleos de un sistema. Cada tarea es una unidad de trabajo independiente que realiza una parte específica del trabajo total. Este tipo de paralelismo se centra en la descomposición del programa en tareas más grandes y significativas en lugar de operaciones de datos individuales.</p>
+<p>Aquí hay algunas características clave del paralelismo a nivel de tareas:</p>
+<ol>
+<li>
+<p><strong>Descomposición en Tareas Independientes:</strong> El programa se divide en tareas independientes que pueden ejecutarse en paralelo. Estas tareas pueden ser funciones, subprogramas, o incluso procesos completos (aunque como se ha comentado, se relaciona especialmente con el paralelismo a nivel de funciones).</p>
+</li>
+<li>
+<p><strong>Minimización de la Comunicación:</strong> A diferencia del paralelismo a nivel de datos (que veremos a continuación), donde la comunicación entre procesos es esencial, el paralelismo a nivel de tareas tiende a minimizar la comunicación entre las tareas. Las tareas son independientes en gran medida, lo que reduce la necesidad de compartir datos constantemente.</p>
+</li>
+<li>
+<p><strong>Ejecución Concurrente:</strong> Las tareas se ejecutan simultáneamente en diferentes procesadores o núcleos. Esto puede mejorar significativamente el rendimiento al aprovechar los recursos de hardware disponibles.</p>
+</li>
+<li>
+<p><strong>Coordinación Limitada:</strong> Si bien las tareas pueden interactuar entre sí, la coordinación entre tareas es generalmente menos compleja que en otros enfoques paralelos. Esto facilita la implementación y mantenimiento del código paralelo.</p>
+</li>
+<li>
+<p><strong>Ejemplos de Uso:</strong> El paralelismo a nivel de tareas es útil en situaciones donde el programa se puede dividir en subtareas que son independientes en gran medida. Algunos ejemplos incluyen simulaciones, procesamiento por lotes, y ciertos tipos de análisis y cómputo científico.</p>
+</li>
+</ol>
+<p>Ejemplo en pseudocódigo:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">tarea_1</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># código de la tarea 1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">tarea_2</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># código de la tarea 2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Ejecutar tareas en paralelo</span>
+</span></span><span class="line"><span class="cl"><span class="n">paralelo</span><span class="p">(</span><span class="n">tarea_1</span><span class="p">,</span> <span class="n">tarea_2</span><span class="p">)</span>
+</span></span></code></pre></div><p>Donde <code>paralelo()</code> indica que las tareas pueden ejecutarse simultáneamente.</p>
+<h3 id="paralelismo-de-datos-dlp---data-level-par">Paralelismo de datos (DLP - Data Level Par).</h3>
+<p>El paralelismo a nivel de datos es otro enfoque de programación paralela en el cual múltiples unidades de procesamiento (como núcleos de CPU) ejecutan simultáneamente la misma operación en diferentes conjuntos de datos. El objetivo principal es realizar operaciones en paralelo sobre elementos de datos independientes, dividiendo así el trabajo y acelerando la ejecución del programa.</p>
+<p>Algunas características clave del paralelismo a nivel de datos son:</p>
+<ol>
+<li>
+<p><strong>Descomposición de Datos:</strong> En lugar de dividir el programa en tareas independientes, el paralelismo a nivel de datos se centra en descomponer los datos en conjuntos más pequeños. Cada unidad de procesamiento realiza la misma operación en su conjunto de datos.</p>
+</li>
+<li>
+<p><strong>Operaciones Repetitivas:</strong> Este enfoque es particularmente útil cuando se tienen operaciones repetitivas o bucles que realizan la misma tarea en diferentes datos. Cada iteración del bucle puede ejecutarse en paralelo en un conjunto de datos separado.</p>
+</li>
+<li>
+<p><strong>Coordinación Necesaria:</strong> Aunque las operaciones se realizan en paralelo, puede ser necesario coordinar el acceso a los datos compartidos. Esto implica gestionar la sincronización y la comunicación entre las unidades de procesamiento para evitar problemas como las condiciones de carrera.</p>
+</li>
+<li>
+<p><strong>Ejemplos de Uso:</strong> El paralelismo a nivel de datos es eficaz en tareas que implican grandes cantidades de datos que pueden procesarse simultáneamente. Se utiliza comúnmente en aplicaciones multimedia, procesamiento de imágenes, procesamiento de señales, simulaciones numéricas y otras tareas donde se realizan operaciones similares en conjuntos de datos extensos.</p>
+</li>
+</ol>
+<p>Ejemplo en pseudocódigo para un bucle paralelo:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Operación a realizar en paralelo sobre un conjunto de datos</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">operacion</span><span class="p">(</span><span class="n">elemento</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># código de la operación</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Datos a procesar en paralelo</span>
+</span></span><span class="line"><span class="cl"><span class="n">datos</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Bucle paralelo para realizar la operación en cada elemento</span>
+</span></span><span class="line"><span class="cl"><span class="n">paralelo_para</span> <span class="n">elemento</span> <span class="n">en</span> <span class="n">datos</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">operacion</span><span class="p">(</span><span class="n">elemento</span><span class="p">)</span>
+</span></span></code></pre></div><p>El paralelismo a nivel de datos permite aprovechar la capacidad de procesamiento de sistemas con múltiples núcleos o unidades de procesamiento, mejorando así la eficiencia y el rendimiento del programa.</p>
+<h3 id="nivel-de-paralelismo-implícito">Nivel de paralelismo implícito.</h3>
+<p>El nivel de paralelismo implícito se refiere a la capacidad de un sistema para ejecutar tareas en paralelo sin la intervención explícita del programador. En otras palabras, el sistema es capaz de identificar y ejecutar tareas en paralelo de manera automática, sin requerir que el programador especifique cómo se deben dividir y ejecutar las tareas.</p>
+<p><img src="./img/esquema.png" alt="Esquema">{width=50%}</p>
+<h3 id="nivel-de-paralelismo-explícito">Nivel de paralelismo explícito.</h3>
+<p>Por otro lado el nivel de paralelismo explícito se refiere a la programación paralela en la que el programador especifica explícitamente cómo se deben dividir y ejecutar las tareas en paralelo. Esto puede implicar el uso de bibliotecas de programación paralela, extensiones de lenguaje, directivas de compilador, o modelos de programación paralela específicos.</p>
+<blockquote>
+<p><strong>Importante:</strong></p>
+<p><strong>Unidad de Control:</strong></p>
+<ul>
+<li>Se refiere a la parte del procesador que gestiona la ejecución de las instrucciones. La unidad de control controla la secuencia de operaciones y garantiza que las instrucciones se ejecuten correctamente.</li>
+</ul>
+<p><strong>Thread (Hilo) o Light Process (Proceso Ligero):</strong></p>
+<ul>
+<li>Es la menor unidad de ejecución gestionada por el sistema operativo. Un hilo es una secuencia de instrucciones que se pueden ejecutar en paralelo o concurrentemente. Múltiples hilos pueden ejecutarse simultáneamente en un procesador con múltiples núcleos.</li>
+</ul>
+<p><strong>Proceso:</strong></p>
+<ul>
+<li>Es la mayor unidad de ejecución gestionada por el sistema operativo. Un proceso puede constar de uno o varios hilos. Cada proceso tiene su propio espacio de memoria y recursos, lo que lo hace independiente de otros procesos. Los procesos pueden ejecutarse en paralelo, y los hilos dentro de un proceso pueden coordinarse para realizar tareas de manera concurrente.</li>
+</ul>
+</blockquote>
+<h4 id="proceso-y-threads-en-un-sistema-operativo">Proceso y Threads en un Sistema Operativo</h4>
+<h5 id="proceso">Proceso</h5>
+<p>Un proceso en un sistema operativo comprende el código del programa y todos los recursos necesarios para su ejecución. Estos recursos incluyen:</p>
+<ul>
+<li>Datos en la pila.</li>
+<li>Segmentos para variables globales y estáticas.</li>
+<li>Datos en el heap.</li>
+<li>Contenido de los registros.</li>
+<li>Tabla de páginas.</li>
+<li>Tabla de ficheros abiertos.</li>
+</ul>
+<p>Un proceso puede constar de múltiples flujos de instrucciones, conocidos como <strong>threads</strong> o <strong>procesos ligeros</strong>.</p>
+<h5 id="threads">Threads</h5>
+<p>Cada thread dentro de un proceso tiene:</p>
+<ul>
+<li>Su propia pila.</li>
+<li>Contenido de los registros, incluyendo el contador de programa (instruction pointer) y el puntero de pila (stack pointer).</li>
+</ul>
+<p>Para comunicar threads dentro de un mismo proceso, se utiliza la memoria compartida, permitiéndoles compartir datos de manera eficiente.</p>
+<h5 id="comunicación-entre-procesos">Comunicación entre Procesos</h5>
+<p>Para comunicar procesos, es necesario utilizar mecanismos más elaborados, ya que cada proceso tiene su propio espacio de memoria y no comparten recursos de manera directa. Se pueden utilizar técnicas como la comunicación a través de sockets, pipes o la implementación de semáforos y mutexes para garantizar la sincronización y evitar conflictos en el acceso a recursos compartidos.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://0xjoseangel.github.io/blog//tags/ac/">ac</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2fac%2ftema1%2f&amp;text=tema1&amp;via=https%3a%2f%2ftwitter.com%2f0xjoseangel" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2fac%2ftema1%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2fac%2ftema1%2f&amp;title=tema1" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2fac%2ftema1%2f&amp;title=tema1" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2fac%2ftema1%2f&amp;title=tema1" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2f0xjoseangel.github.io%2fblog%2fpost%2fac%2ftema1%2f&amp;description=tema1" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://0xjoseangel.github.io/blog/post/lmd/tema1/" data-toggle="tooltip" data-placement="top" title="tema1">&larr; Artículo anterior</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="mailto:joseangelcarretero300@gmail.com" title="Email me">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://github.com/0xjoseangel" title="GitHub">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://twitter.com/0xjoseangel" title="Twitter">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.linkedin.com/in/jos%C3%A9-%C3%A1ngel-carretero-montes-476008202/" title="LinkedIn">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.instagram.com/joseangelcarretero/" title="Instagram">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              José Ángel Carretero Montes
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2024
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://0xjoseangel.github.io/blog/">José Ángel Carretero Montes</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="https://0xjoseangel.github.io/blog/js/main.js"></script>
+<script src="https://0xjoseangel.github.io/blog/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://0xjoseangel.github.io/blog/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
